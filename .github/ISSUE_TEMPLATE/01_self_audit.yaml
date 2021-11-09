@@ -1,0 +1,31 @@
+name: Self Audit (1st level)
+description: A preliminary check that is done by the project authors before requesting 3rd party audit
+title: "[Scope]: "
+labels: ["stage:first"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source branch
+      description: What is the source branch to be audited?
+      placeholder: ex. github.com/allinbits/something-someting
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Some notes you may find useful!
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: Test coverage above 80% for modules
+          required: true
+        - label: Module level documetation
+          required: true
+        - label: General documentation (portal?)
+          required: true
+        - label: Simulation executed (2w?)
+          required: true

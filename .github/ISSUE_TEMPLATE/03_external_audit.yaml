@@ -1,0 +1,24 @@
+name: External Audit (3rd level)
+description: An audit requested to a 3rd party.
+title: "[Scope]: "
+labels: ["stage:external"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source branch
+      description: What is the source branch to be audited?
+      placeholder: ex. github.com/allinbits/something/blob/something
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        The stuff is critical for the project
+  - type: textarea
+    id: highlights
+    attributes:
+      label: What to look for
+      description: "this is what to look for"
+    validations:
+      required: true

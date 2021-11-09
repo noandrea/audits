@@ -1,0 +1,24 @@
+name: Internal Audit (2nd level)
+description: An audit requested to internal teams at Tendermint
+title: "[Scope]: "
+labels: ["stage:internal"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source branch
+      description: What is the source branch to be audited?
+      placeholder: ex. github.com/allinbits/something/blob/something
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        The stuff is critical for the project
+  - type: textarea
+    id: highlights
+    attributes:
+      label: What to look for
+      description: "this is what to look for"
+    validations:
+      required: true

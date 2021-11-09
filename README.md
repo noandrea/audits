@@ -68,5 +68,6 @@ The External audit must be approved by the **codeowners** or the **managers** si
 
 ## Caveats
 
+- the general project setup is a POC, any specific problems should be addressed by the **codeowners**
 - the issue templates are provided as a current practical use cases for the **codeowners** benefit. 
 - this template can be used as a seed template for a auditing biz model for tendermint, in this case some roles will have to be adjusted
