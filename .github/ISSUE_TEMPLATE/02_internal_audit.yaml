@@ -11,6 +11,14 @@ body:
       placeholder: ex. github.com/allinbits/something/blob/something
     validations:
       required: true
+  - type: input
+    id: self-audit-issue
+    attributes:
+      label: Self audit issue reference
+      description: If a self-audit was performed, link the issue here
+      placeholder: ex. github.com/allinbits/audits/issues/123
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |

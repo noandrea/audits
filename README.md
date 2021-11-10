@@ -18,7 +18,7 @@ The repository is mostly dedicated to:
 - **software artifacts** - any piece of running code (module, node, smart contract) that is to be released ot a public audience
 - **authors** - are the team or the individuals that have crafted a software artifact
 - **audit plan** - the critical aspects of the software artifacts identified by the authors
-- **codeowners** - are the owners of the audit repository and the responsible to oversee the audit process and rules
+- **codeowners** - are the owners of the audit repository and the responsible to oversee the audit process and rules (the security team)
 - **internal auditors** - are teams or individuals within the Tendermint organization that are performing code review or security audits of software artifacts 
 - **external auditors** - are entities outside the Tendermint organization that are performing security audits of software artifacts
 - **managers** Tendermint figures that have management responsibilities

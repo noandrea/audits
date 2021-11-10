@@ -32,13 +32,13 @@ body:
         - label: Codeclimate (?)
           required: false
   - type: markdown
-      attributes:
-        value: ### Documentation
+    attributes:
+      value: ### Documentation
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Documenation checklist
+      description: this is the checklist for documentation
       options:
         - label: Module level documetation
           required: false
@@ -47,12 +47,29 @@ body:
         - label: General documentation (portal?)
           required: false
   - type: markdown
-      attributes:
-        value: ### Network specific
+    attributes:
+      value: ### Network specific
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: network checklist
+      description: checklist for network launch
+      options:
+        - label: Module level documetation
+          required: false
         - label: Simulation executed (2w?)
           required: false
   - type: markdown
-      attributes:
-        value: ### General
+    attributes:
+      value: ### General
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
         - label: No github CVE warnings
           required: false
+
+
+
