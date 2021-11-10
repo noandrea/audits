@@ -10,15 +10,26 @@ body:
       description: What is the source branch to be audited?
       placeholder: ex. github.com/allinbits/something/blob/something
     validations:
-      required: false
+      required: true
   - type: markdown
     attributes:
       value: |
-        The stuff is critical for the project
+        In the following section list the functionalities or the aspects of
+        the project that are high value targets or valuable assets
+        from an attacker perspective.
+
+        Rank the targets by severity (1 least severe, 5 most severe)
   - type: textarea
     id: highlights
     attributes:
-      label: What to look for
-      description: "this is what to look for"
+      label: Assets / Targets
+      description: "list of assets or targets ranked by severity"
+      value: |
+        1. Verification Credential Validation, Severity: 5
+
+           The credential validation process implemented in the verification credential module in the
+           keeper and described in the ADR ... is the code block that guarantees the chain of
+           trust for the network
+
     validations:
       required: true

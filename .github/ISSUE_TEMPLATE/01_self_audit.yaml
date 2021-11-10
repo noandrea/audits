@@ -14,18 +14,45 @@ body:
   - type: markdown
     attributes:
       value: |
-        Some notes you may find useful!
+        The following section is a checklist of actions that should be perfomrmed as a pre-requisite
+        for a audit process
+  - type: markdown
+      attributes:
+        value: ### Automatic Checks
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Automatic checks
+      description: checks that should be enabled on the target repositories
+      options:
+        - label: golangci-lint with the following configuration (TODO permalink to the config)
+          required: false
+        - label: Codecov (?)
+          required: false
+        - label: Codeclimate (?)
+          required: false
+  - type: markdown
+      attributes:
+        value: ### Documentation
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
       options:
-        - label: Test coverage above 80% for modules
-          required: true
         - label: Module level documetation
-          required: true
+          required: false
+        - label: ADRs
+          required: false
         - label: General documentation (portal?)
-          required: true
+          required: false
+  - type: markdown
+      attributes:
+        value: ### Network specific
         - label: Simulation executed (2w?)
-          required: true
+          required: false
+  - type: markdown
+      attributes:
+        value: ### General
+        - label: No github CVE warnings
+          required: false
