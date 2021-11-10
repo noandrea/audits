@@ -1,0 +1,66 @@
+name: Self Audit (1st level)
+description: A preliminary check that is done by the project authors before requesting 3rd party audit
+title: "[Audit]: "
+labels: []
+body:
+  - type: input
+    id: i10
+    attributes:
+      label: Audit source
+      description: What is the audit request source (link to the issue)
+      placeholder: ex. github.com/allinbits/project/issues/123
+    validations:
+      required: true
+  - type: input
+      id: i11
+      attributes:
+        label: Audit target/asset
+        description: What is the audit focusing on
+        placeholder: ex. Verification Credentials (Severity 5)
+      validations:
+        required: true
+  - type: markdown
+    id: i20
+    attributes:
+      value: |
+        Please describe what is the outcome of the audit.
+  - type: checkboxes
+    id: i40
+    attributes:
+      label: Audit activities
+      description: specify which activities have been performed.
+      options:
+        - label: Code inspection
+          required: false
+        - label: Code execution
+          required: false
+        - label: Input manipulations (to crash or have the node misbehave)
+          required: false
+  - type: checkboxes
+    id: i50
+    attributes:
+      label: Audit Outcome
+      description: Indicate with is the overall outcome of the audit.
+      options:
+        - label: No issue found
+          required: false
+        - label: Minor issues found
+          required: false
+        - label: Major issues found
+          required: false
+
+  - type: textarea
+    id: highlights
+    attributes:
+      label: Notes
+      description: Elaborate about what has been done and what has been discovered.
+      value: |
+        1. Verification Credential Validation, Severity: 5
+
+           Nothing found
+
+    validations:
+      required: true
+
+
+
