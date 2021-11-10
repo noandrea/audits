@@ -4,7 +4,7 @@ title: "[Scope]: "
 labels: ["stage:first"]
 body:
   - type: input
-    id: source
+    id: i10
     attributes:
       label: Source branch
       description: What is the source branch to be audited?
@@ -12,17 +12,15 @@ body:
     validations:
       required: false
   - type: markdown
+    id: i20
     attributes:
       value: |
         The following section is a checklist of actions that should be perfomrmed as a pre-requisite
         for a audit process
-  - type: markdown
-      attributes:
-        value: ### Automatic Checks
   - type: checkboxes
-    id: terms
+    id: i40
     attributes:
-      label: Automatic checks
+      label: Automation
       description: checks that should be enabled on the target repositories
       options:
         - label: golangci-lint with the following configuration (TODO permalink to the config)
@@ -31,13 +29,10 @@ body:
           required: false
         - label: Codeclimate (?)
           required: false
-  - type: markdown
-    attributes:
-      value: ### Documentation
   - type: checkboxes
-    id: terms
+    id: i60
     attributes:
-      label: Documenation checklist
+      label: Documenation
       description: this is the checklist for documentation
       options:
         - label: Module level documetation
@@ -46,27 +41,19 @@ body:
           required: false
         - label: General documentation (portal?)
           required: false
-  - type: markdown
-    attributes:
-      value: ### Network specific
   - type: checkboxes
-    id: terms
+    id: i80
     attributes:
-      label: network checklist
+      label: Network
       description: checklist for network launch
       options:
-        - label: Module level documetation
-          required: false
         - label: Simulation executed (2w?)
           required: false
-  - type: markdown
-    attributes:
-      value: ### General
   - type: checkboxes
-    id: terms
+    id: i100
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: General
+      description: general checklist
       options:
         - label: No github CVE warnings
           required: false
