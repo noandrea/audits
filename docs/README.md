@@ -37,6 +37,10 @@ They hold the knowledge about what is to be audited and when.
 
 ## Stages 
 
+The following diagram illustrates the auditing process 
+
+![](./assets/diagrams/out/audit.svg)
+
 ### First Line Defence
 
 The first line defence's work is undertaken by the **authors** of the artifact to be published
