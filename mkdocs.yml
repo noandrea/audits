@@ -1,0 +1,34 @@
+site_name: Tendermint Audits 
+site_url:
+repo_url: https://github.com/noandrea/audits
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - search.share
+plugins:
+  - search
+  - build_plantuml:
+      diagram_root: "docs/assets/diagrams" # should reside under docs_dir
+      output_folder: "out"
+      input_folder: "src"
+      output_format: "svg"
+      input_extensions: "puml" # comma separated list of extensions to parse, by default every file is parsed
+
+# nav:
+#     - Home: README.md
+#     - ADRs:
+#         - 'ADR-002: Documentation structure': Explanation/ADR/adr-002-docs-structure.md
+#         - 'ADR-003: E-Money Token Issuer': Explanation/ADR/adr-003-issuer.md
+#         - 'ADR-004: Decentralized Identifier (DID)': Explanation/ADR/adr-004-did.md
+#         - 'ADR-005: Registration Credential': Explanation/ADR/adr-005-registration-credential.md
+#         - 'ADR-006: License Credential': Explanation/ADR/adr-006-license-credential.md
+#     - Modules:
+#         - 'DID': ../x/did/README.md
+#         - 'Issuer': ../x/did/README.md
+#         - 'Regulator': ../x/did/README.md
+#     - 'Contributing': '../CONTRIBUTING.md'
+#     - 'Bug Tracker': 'https://github.com/allinbits/cosmos-cash/'
+

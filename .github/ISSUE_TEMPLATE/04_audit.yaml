@@ -1,4 +1,4 @@
-name: Self Audit (1st level)
+name: Audit
 description: A preliminary check that is done by the project authors before requesting 3rd party audit
 title: "[Audit]: "
 labels: []
@@ -12,13 +12,13 @@ body:
     validations:
       required: true
   - type: input
-      id: i11
-      attributes:
-        label: Audit target/asset
-        description: What is the audit focusing on
-        placeholder: ex. Verification Credentials (Severity 5)
-      validations:
-        required: true
+    id: i11
+    attributes:
+      label: Audit target/asset
+      description: What is the audit focusing on
+      placeholder: ex. Verification Credentials (Severity 5)
+    validations:
+      required: true
   - type: markdown
     id: i20
     attributes:
@@ -58,7 +58,6 @@ body:
         1. Verification Credential Validation, Severity: 5
 
            Nothing found
-
     validations:
       required: true
 
