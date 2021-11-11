@@ -1,0 +1,42 @@
+@startuml
+title Auditing Process (WIP)
+footer Tendermint Audits: https://github.com/noandrea/audits
+
+<style>
+activityDiagram {
+  LineColor #222
+  FontName sans
+}
+</style>
+skinparam monochrome false
+skinparam shadowing false
+
+start
+#white:Project **authors** submit a __Self Audit__;
+
+repeat
+    #white:Project **authors** perform the necessary steps
+    to complete the __Self Audit__;
+    #white:Project **authors** request **codeowners**
+    for review of the __Self Audit__;
+repeat while (__Self Audit__ approved ?) is (no)
+-> yes;
+
+#white:Project **authors** submit a __Internal Audit__ request;
+repeat
+    #white:Project **authors** fill the details of the __Internal Audit__;
+    #white:**codeowners** review the __Internal Audit__ request;
+repeat while (__Internal Audit__ request well formed ?) is (no)
+-> yes;
+
+#white:**codeowners** identify **internal auditors**
+for the __Internal Audit__ request;
+
+#white:**internal auditors** perform the audit and
+submit an __Audit__;
+
+#white: **codeowners** summarize the result of the audit
+and discuss further steps with project **authors**;
+
+
+@enduml

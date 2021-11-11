@@ -1,0 +1,584 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Tendermint Audits</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tendermint-audits-program" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Tendermint Audits" class="md-header__button md-logo" aria-label="Tendermint Audits" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tendermint Audits
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tendermint Audits Program
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/noandrea/audits/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Tendermint Audits" class="md-nav__button md-logo" aria-label="Tendermint Audits" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tendermint Audits
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/noandrea/audits/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tendermint Audits Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Tendermint Audits Program
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General setup
+  </a>
+  
+    <nav class="md-nav" aria-label="General setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    Roles and responsibilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stages" class="md-nav__link">
+    Stages
+  </a>
+  
+    <nav class="md-nav" aria-label="Stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-line-defence" class="md-nav__link">
+    First Line Defence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-line-defence" class="md-nav__link">
+    Second Line Defence
+  </a>
+  
+    <nav class="md-nav" aria-label="Second Line Defence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audits" class="md-nav__link">
+    Audits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-line-defence" class="md-nav__link">
+    Third Line Defence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General setup
+  </a>
+  
+    <nav class="md-nav" aria-label="General setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    Roles and responsibilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stages" class="md-nav__link">
+    Stages
+  </a>
+  
+    <nav class="md-nav" aria-label="Stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-line-defence" class="md-nav__link">
+    First Line Defence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-line-defence" class="md-nav__link">
+    Second Line Defence
+  </a>
+  
+    <nav class="md-nav" aria-label="Second Line Defence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audits" class="md-nav__link">
+    Audits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-line-defence" class="md-nav__link">
+    Third Line Defence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/noandrea/audits/edit/master/docs/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="tendermint-audits-program">Tendermint Audits Program</h1>
+<p>The repository introduces a practical setup to realize the auditing protocol for cosmos-sdk based projects outlined <a href="https://www.notion.so/allinbits/Engineering-Risk-Management-974a8f888cb847f083680d9b546f4c6c">here</a></p>
+<h2 id="general-setup">General setup</h2>
+<p>The repository shall be overseen by the team that is delegated to oversee security within 
+the Tendermint organization.</p>
+<p>The repository is mostly dedicated to:</p>
+<ul>
+<li>tracking issues related to different stages of an audit for a project</li>
+<li>maintaining software tha automates some aspects of an audit (like github actions)</li>
+</ul>
+<h3 id="glossary">Glossary</h3>
+<ul>
+<li><strong>software artifacts</strong> - any piece of running code (module, node, smart contract) that is to be released ot a public audience</li>
+<li><strong>authors</strong> - are the team or the individuals that have crafted a software artifact</li>
+<li><strong>audit plan</strong> - the critical aspects of the software artifacts identified by the authors</li>
+<li><strong>codeowners</strong> - are the owners of the audit repository and the responsible to oversee the audit process and rules (the security team)</li>
+<li><strong>internal auditors</strong> - are teams or individuals within the Tendermint organization that are performing code review or security audits of software artifacts </li>
+<li><strong>external auditors</strong> - are entities outside the Tendermint organization that are performing security audits of software artifacts</li>
+<li><strong>managers</strong> Tendermint figures that have management responsibilities</li>
+</ul>
+<h3 id="roles-and-responsibilities">Roles and responsibilities</h3>
+<p><strong>Authors</strong> are responsible to create <code>Self Audit</code>, <code>Internal Audit</code> and <code>External Audit</code>. 
+They hold the knowledge about what is to be audited and when.</p>
+<p><strong>Codeowners</strong> are responsible to:</p>
+<ul>
+<li>define the template and requirements for the <code>Self Audit</code>, <code>Internal Audit</code> and <code>External Audit</code></li>
+<li>select the <code>Internal Auditors</code></li>
+<li>select the <code>External Auditors</code></li>
+<li>monitor the state of audits and make sure that they are well defined and executed timely. The codeowners should take actions to make sure that the reviews are performed in a timely fashion by re-assign the audits to available resources.</li>
+</ul>
+<h2 id="stages">Stages</h2>
+<p>The following diagram illustrates the auditing process </p>
+<p><img alt="" src="assets/diagrams/out/audit.svg" /></p>
+<h3 id="first-line-defence">First Line Defence</h3>
+<p>The first line defence's work is undertaken by the <strong>authors</strong> of the artifact to be published
+and it is identified by an issue type <code>Self Audit</code>, created by the <strong>authors</strong>, that indicates:</p>
+<ul>
+<li>the source branch of the code that contains the code to be audited (the release branch)</li>
+<li>a checklist of actions that should be performed by the authors to mark the <code>Self Audit</code> completed</li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/noandrea/audits/issues/new?assignees=&amp;labels=stage%3Afirst&amp;template=01_self_audit.yaml&amp;title=%5BScope%5D%3A+">Create a <code>Self Audit</code> issue</a></p>
+</blockquote>
+<h3 id="second-line-defence">Second Line Defence</h3>
+<p>The second line defence's work is undertaken by <strong>internal auditors</strong> upon request by the <strong>authors</strong> 
+or by the <strong>codeowners</strong>.</p>
+<p>It is identified by and issue of type <code>Internal Audit</code>, created by the <strong>authors</strong>. The <strong>authors</strong> should identify</p>
+<ul>
+<li>the source branch of the code that contains the code to be audited (the release branch)</li>
+<li>the <strong>audit plan</strong> for the artifact</li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/noandrea/audits/issues/new?assignees=&amp;labels=stage%3Ainternal&amp;template=02_internal_audit.yaml&amp;title=%5BScope%5D%3A+">Create a <code>Internal Audit</code> issue</a></p>
+</blockquote>
+<h4 id="audits">Audits</h4>
+<p>Internal audits are carried on by Tendermint members, the results of an audit should be submitted in an <code>Audit</code> issue, documenting the details of the audit process and results.</p>
+<blockquote>
+<p><a href="https://github.com/noandrea/audits/issues/new?assignees=&amp;labels=&amp;template=04_audit.yaml&amp;title=%5BAudit%5D%3A+">Submit an <code>Audit</code></a></p>
+</blockquote>
+<h3 id="third-line-defence">Third Line Defence</h3>
+<p>The third line defence's work is undertaken by <strong>external auditors</strong> upon request by the <strong>authors</strong>
+or by the <strong>codeowners</strong> or <strong>managers</strong>.</p>
+<p>It is identified by and issue of type <code>External Audit</code>, created by the <strong>authors</strong>. The <strong>authors</strong> should identify</p>
+<ul>
+<li>the source branch of the code that contains the code to be audited (the release branch)</li>
+<li>the <strong>audit plan</strong> for the artifact</li>
+</ul>
+<p>The External audit must be approved by the <strong>codeowners</strong> or the <strong>managers</strong> since it requires budgeting outside the <strong>authors</strong> project scope.</p>
+<blockquote>
+<p><a href="https://github.com/noandrea/audits/issues/new?assignees=&amp;labels=stage%3Aexternal&amp;template=03_external_audit.yaml&amp;title=%5BScope%5D%3A+">Create an <code>External Audit</code> issue</a></p>
+</blockquote>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>the general project setup is a POC, any specific problems should be addressed by the <strong>codeowners</strong></li>
+<li>the issue templates are provided as a current practical use cases for the <strong>codeowners</strong> benefit. </li>
+<li>this template can be used as a seed template for a auditing biz model for tendermint, in this case some roles will have to be adjusted</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
